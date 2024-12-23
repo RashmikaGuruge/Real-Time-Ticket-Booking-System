@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.realtimeeventticketingsystem.controller.AddEventController"
+      style="-fx-background-color: #f7f9fc; -fx-padding: 30; -fx-min-width: 600; -fx-min-height: 600; -fx-max-width: 600; -fx-max-height: 500;">
+
+    <VBox spacing="10" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Button text="← Back" onAction="#goBack" style="-fx-background-color: transparent; -fx-text-fill: #4a90e2; -fx-font-weight: bold; -fx-font-size: 14px; -fx-cursor: hand;"/>
+        <Label text="Add Event" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+    </VBox>
+
+    <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Label text="Event Name" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <TextField fx:id="eventNameField" promptText="Enter the event name" style="-fx-pref-width: 300px; -fx-padding: 10; -fx-background-color: #ffffff; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-font-size: 14px;"/>
+    </VBox>
+
+    <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Label text="Event Date" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <TextField fx:id="eventDateField" promptText="Enter the event date" style="-fx-pref-width: 300px; -fx-padding: 10; -fx-background-color: #ffffff; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-font-size: 14px;"/>
+    </VBox>
+
+    <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Label text="Location" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <TextField fx:id="eventLocationField" promptText="Enter the event location" style="-fx-pref-width: 300px; -fx-padding: 10; -fx-background-color: #ffffff; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-font-size: 14px;"/>
+    </VBox>
+
+    <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Label text="Total Tickets" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <TextField fx:id="totalTicketsField" promptText="Enter the total tickets" style="-fx-pref-width: 300px; -fx-padding: 10; -fx-background-color: #ffffff; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-font-size: 14px;"/>
+    </VBox>
+
+    <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Label text="Ticket Price" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <TextField fx:id="ticketPriceField" promptText="Enter the ticket price" style="-fx-pref-width: 300px; -fx-padding: 10; -fx-background-color: #ffffff; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-font-size: 14px;"/>
+    </VBox>
+
+    <Button text="Add Event" onAction="#addEvent" style="-fx-background-color: #4a90e2; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 150px; -fx-padding: 10; -fx-font-size: 14px; -fx-border-radius: 5;"/>
+</VBox>

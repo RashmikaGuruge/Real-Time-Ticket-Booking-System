@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.realtimeeventticketingsystem.controller.BookTicketsController"
+      spacing="15" alignment="CENTER"
+      prefWidth="600.0" prefHeight="500.0"
+      style="-fx-background-color: #f7f9fc; -fx-padding: 20;">
+
+    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10;">
+        <Button text="← Back" onAction="#goBack" style="-fx-background-color: transparent; -fx-font-size: 14px; -fx-text-fill: #4a90e2; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <HBox alignment="CENTER" style="-fx-padding: 5;">
+        <Label text="Book Tickets" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-border-width: 1;">
+        <Label text="Event Details" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #4a4a4a;"/>
+        <Label fx:id="eventNameLabel" text="Event Name" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Location:" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+            <Label fx:id="locationLabel" text="Location" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Date:" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+            <Label fx:id="eventDateLabel" text="Date" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Ticket Price:" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+            <Label fx:id="ticketPriceLabel" text="Ticket Price" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Available Tickets:" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+            <Label fx:id="availableTicketsLabel" text="Available Tickets" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+        </HBox>
+    </VBox>
+
+    <VBox alignment="CENTER" spacing="10" style="-fx-padding: 15; -fx-background-color: #ffffff; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-border-width: 1;">
+        <Label text="Enter Quantity" style="-fx-font-size: 14px; -fx-text-fill: #4a4a4a;"/>
+        <TextField fx:id="quantityField" promptText="Quantity" style="-fx-pref-width: 150px;"/>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Total Price:" style="-fx-font-size: 14px; -fx-text-fill: #4a4a4a;"/>
+            <Label fx:id="totalPriceLabel" text="0.00" style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+        </HBox>
+        <Button text="Book Tickets" onAction="#bookTickets" style="-fx-background-color: #4a90e2; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 120px;"/>
+    </VBox>
+
+</VBox>

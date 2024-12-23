@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox spacing="15" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.realtimeeventticketingsystem.controller.RegisterController"
+      style="-fx-background-color: #f7f9fc; -fx-padding: 30; -fx-min-width: 600; -fx-min-height: 500; -fx-max-width: 600; -fx-max-height: 500;">
+
+    <VBox spacing="10" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Button text="← Back" onAction="#goToLogin" style="-fx-background-color: transparent; -fx-text-fill: #4a90e2; -fx-font-weight: bold; -fx-font-size: 14px; -fx-cursor: hand;"/>
+        <Label text="Register" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+    </VBox>
+
+    <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Label text="Username" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <TextField fx:id="usernameField" promptText="Enter your username" style="-fx-pref-width: 300px; -fx-padding: 10; -fx-background-color: #ffffff; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-font-size: 14px;"/>
+    </VBox>
+
+    <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Label text="Email" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <TextField fx:id="emailField" promptText="Enter your email" style="-fx-pref-width: 300px; -fx-padding: 10; -fx-background-color: #ffffff; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-font-size: 14px;"/>
+    </VBox>
+
+    <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Label text="Password" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <PasswordField fx:id="passwordField" promptText="Enter your password" style="-fx-pref-width: 300px; -fx-padding: 10; -fx-background-color: #ffffff; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-font-size: 14px;"/>
+    </VBox>
+
+    <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-pref-width: 100%;">
+        <Label text="Role" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <ComboBox fx:id="roleComboBox" promptText="Select a role" style="-fx-pref-width: 300px; -fx-padding: 10; -fx-background-color: #ffffff; -fx-border-color: #d0d9e6; -fx-border-radius: 5; -fx-font-size: 14px;">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Vendor"/>
+                    <String fx:value="Customer"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </VBox>
+
+    <Button text="Register" onAction="#register" style="-fx-background-color: #4a90e2; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 150px; -fx-padding: 10; -fx-font-size: 14px; -fx-border-radius: 5;"/>
+
+</VBox>
